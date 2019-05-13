@@ -1,5 +1,5 @@
 # WAVFile-Reader
-A simple wave file reader that reads <b>pcb encoded mono</b> audio files of the <b>WAV</b> format and renders the wave form on the screen.
+A simple wave file reader that reads <b>pcb encoded mono</b> audio files of <b>WAV</b> format and renders the wave form on the screen.
 
 <h2>Details:</h2>
 <ol>
