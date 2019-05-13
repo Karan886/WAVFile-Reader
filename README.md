@@ -6,6 +6,7 @@ A simple wave file reader that reads <b>pcb encoded mono</b> audio files of <b>W
 <li>Source code can be found in WAVFileReader > src</li>
 <li>This program was developed using Java programming language and compiled with Eclipse IDE</li>
 <li>Java UI Library: Using <b>Swing</b> and <b>JFrame</b> to create window panels/frames/drawing graphics elements</li>
+<li>Note: the audio track is assumed to have less than 65536 samples</li>
 </ol>
 
 <h2>Program Structure:</h2>
