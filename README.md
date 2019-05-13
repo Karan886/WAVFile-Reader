@@ -14,4 +14,10 @@ A simple wave file reader that reads <b>pcb encoded mono</b> audio files of the 
 <li><b>WAVForm.java:</b> this class extends JFrame class, overrides the paintComponent(Graphics graphics) method of the JFrame class. The importance of this class is that it draws each sample into a wave form and creates a <b>JFrame component</b> which can be added to a new frame and displayed to the user.</li>
 <li><b>Main.java:</b> stitches together all program components/classes including showing the welcome UI to help users navigate the program.</li>
 </ol>
+
+<h2>Testing</h2>
+<ol>
+ <li>An executable .jar file can be found in the root folder of this project <b>WAVFileReader > WAVFileReader.jar</b></li>
+ <li>Some test audio files can be found in <b>WAVFileReader > SampleAudio</b></li>
+</ol>
  
