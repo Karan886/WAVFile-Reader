@@ -12,7 +12,7 @@ A simple wave file reader that reads <b><em>PCB</em> encoded <em>mono</em></b> a
 <h2>Program Structure:</h2>
 <ul>
 <li><b>WAVFile.java:</b> reads, organizes and interprets wav file bytes</li>
-<li><b>WAVForm.java:</b> this class extends JFrame class, overrides the paintComponent(Graphics graphics) method of the JFrame class. The importance of this class is that it draws each sample into a wave form and creates a <b>JFrame component</b> which can be added to a new frame and displayed to the user.</li>
+<li><b>WAVForm.java:</b> this class extends <em>JFrame class</em>, overrides the paintComponent(Graphics graphics) method of the <em>JFrame class</em>. The importance of this class is that it draws each sample into a wave form and creates a <em><b>JFrame component</b></em> which can be added to a new frame and displayed to the user.</li>
 <li><b>Main.java:</b> stitches together all program components/classes including showing the welcome UI to help users navigate the program.</li>
 </ul>
 <hr/>
