@@ -51,20 +51,19 @@ public class WAVFile {
 	//***reads raw/audio bytes decodes the sample value and stores them into an integer array***
 	private int[] readRawData() {
 		int numOfRawDataBytes = this.getRawDataSize();
-		
 		int bitsPerSample = this.getBitsPerSample();
 		int bytesPerSample = bitsPerSample/8;
-		
 		byte[] data = readFile(44,numOfRawDataBytes);
-		
 		int numOfSamples = this.getNumOfSamples();
 		int[] samples = new int[numOfSamples];
+		
 		int samplesIndex = 0;
 		int j = 0;
 		int max = 0;
 		int absoluteMax = 0;
+		
 		//read  bytesPerSample at a time and store as integer
-		for(int i=0;i<data.length-1;i+=bytesPerSample) {
+		for(int i = 0;i < data.length-1;i += bytesPerSample) {
 			j = i+1;
 			samples[samplesIndex] = this.toSignedLittleEndianInt(i, j, data);
 
@@ -90,7 +89,7 @@ public class WAVFile {
 	//***helper method converts byte order to Little Endian and returns a hex string***  
 	private String toLittleEndianHex(int start, int end,byte[] data) {
 		String str = "0x";
-		for(int i=end;i>=start;i--) {
+		for(int i = end;i >= start;i--) {
 			str += String.format("%02x", data[i]);
 		}
 		return str;
@@ -98,7 +97,7 @@ public class WAVFile {
 	//***helper method converts a series of bytes into signed integer values in little endian byte order***
 	private int toSignedLittleEndianInt(int start, int end,byte[] data) {
 		String str = "";
-		for(int i=end;i>=start;i--) {
+		for(int i = end;i >= start;i--) {
 			str += String.format("%02x", data[i]);
 		}
 		short s = (short)Integer.parseInt(str,(end - start + 1)*8);
@@ -115,7 +114,8 @@ public class WAVFile {
 			RandomAccessFile inputStream = randomAccess;
 			inputStream.read(data,0,numBytes);
 			inputStream.close();
-		}catch(Exception e) {
+		}
+		catch(Exception e) {
 			e.printStackTrace();
 			return null;
 		}
